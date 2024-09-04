@@ -3,7 +3,7 @@ import AnnoucementCards from "../AnnoucementCards/page";
 
 const RightSidePanel = () => {
   return (
-    <div className=" flex flex-col sm:flex-row md:flex-col p-1 gap-3">
+    <div className=" flex flex-col md:flex-row lg:flex-col p-1 gap-3">
       <div className="mt-6">
         <ActivityCard />
       </div>
