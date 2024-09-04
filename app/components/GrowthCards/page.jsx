@@ -18,7 +18,7 @@ const GrowthCards = ({ title, value, subStats, growthPercentage, pastMonth }) =>
         </span>
       </div>
       <div className="text-sm text-gray-500">
-        {subStats.map((stat, index) => (
+        {subStats?.map((stat, index) => (
           <div key={index}>{stat}</div>
         ))}
       </div>
