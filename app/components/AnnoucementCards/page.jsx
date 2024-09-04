@@ -11,9 +11,9 @@ const AnnoucementCards = ({ data }) => {
         </div>
       </div>
       <div className="flex gap-3 flex-col ">
-        {data?.value?.map((val) => {
+        {data?.value?.map((val,index) => {
           return (
-            <div className=" bg-slate-200 rounded-md p-2 flex justify-between ">
+            <div key={index} className=" bg-slate-200 rounded-md p-2 flex justify-between ">
               <div>
                 <p>{val.name}</p>
                 <p className="text-xs">{val.time}</p>
@@ -30,9 +30,9 @@ const AnnoucementCards = ({ data }) => {
       </div>
       {data?.Priority ? <div className="flex gap-3 flex-col mb-5">
         <p>Priority</p>
-        {data?.Priority?.map((val) => {
+        {data?.Priority?.map((val,index) => {
           return (
-            <div className=" bg-slate-200 rounded-md p-2 flex justify-between ">
+            <div key={index} className=" bg-slate-200 rounded-md p-2 flex justify-between ">
               <div>
                 <p>{val.name}</p>
                 <p className="text-xs">{val.time}</p>
@@ -50,9 +50,9 @@ const AnnoucementCards = ({ data }) => {
       
       {data?.Other ? <div className="flex gap-3 flex-col ">
         <p>Other</p>
-        {data?.Other?.map((val) => {
+        {data?.Other?.map((val,index) => {
           return (
-            <div className=" bg-slate-200 rounded-md p-2 flex justify-between ">
+            <div key={index} className=" bg-slate-200 rounded-md p-2 flex justify-between ">
               <div>
                 <p>{val.name}</p>
                 <p className="text-xs">{val.time}</p>
