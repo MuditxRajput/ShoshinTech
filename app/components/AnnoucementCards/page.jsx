@@ -4,10 +4,13 @@ import { RiPushpinFill } from "react-icons/ri";
 const AnnoucementCards = ({ data }) => {
     return (
       <div className="rounded-md border-2 border-slate-200 p-4 mt-6">
-        <div className="flex justify-between mb-5">
-          <p className="text-xl font-semibold">{data?.name}</p>
+        <div className="flex justify-between items-center mb-5">
+            <div>
+
+          <p className=" text-md sm:text-xl whitespace-nowrap font-semibold ">{data?.name}</p>
+            </div>
           <div>
-            <p className="text-sm">Today, {data?.date}</p>
+            <p className="text-xs whitespace-nowrap">Today, {data?.date}</p>
           </div>
         </div>
         <div className="flex gap-3 flex-col">
@@ -29,7 +32,7 @@ const AnnoucementCards = ({ data }) => {
             <p>Priority</p>
             {data?.Priority?.map((val, index) => (
               <div key={index} className="bg-slate-200 rounded-md p-2 flex justify-between">
-                <div>
+                <div className="">
                   <p>{val?.name}</p>
                   <p className="text-xs">{val?.time}</p>
                 </div>
